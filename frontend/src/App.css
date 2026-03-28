@@ -1,0 +1,143 @@
+/* Background */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top left, #2c3e50, #000000);
+  color: white;
+}
+
+/* App container */
+.app {
+  padding: 40px;
+  text-align: center;
+}
+
+/* Title */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  background: linear-gradient(to right, #ffffff, #a5a5a5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Panels layout */
+.panels {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Glass panels */
+.panel {
+  width: 400px;
+  padding: 25px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Section titles */
+.panel h3 {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #aaa;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+/* Inner box (important for design) */
+.inner-box {
+  background: rgba(0,0,0,0.35);
+  border-radius: 12px;
+  padding: 15px;
+  flex: 1;
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  height: 150px;
+  border: none;
+  outline: none;
+  resize: none;
+
+  background: transparent;
+  color: #ddd;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Output */
+.output {
+  color: #eee;
+  line-height: 1.6;
+  overflow-y: auto;
+}
+
+/* Word count */
+.count {
+  font-size: 12px;
+  color: #888;
+  text-align: right;
+  margin-top: 5px;
+}
+
+/* Button */
+button {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+
+  background: rgba(255,255,255,0.15);
+  color: white;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+
+  transition: 0.3s;
+}
+
+button:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+}
+
+/* Stats */
+.stats {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Loader */
+.loader {
+  width: 35px;
+  height: 35px;
+  border: 3px solid rgba(255,255,255,0.1);
+  border-top: 3px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}

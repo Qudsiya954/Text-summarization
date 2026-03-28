@@ -1,0 +1,17 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+build/
+
+# Environment
+.env
+
+# OS
+.DS_Store
+
+# Model (OPTIONAL - see below)
+# backend/model/t5-summarizer/

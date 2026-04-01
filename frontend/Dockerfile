@@ -1,18 +1,19 @@
-FROM node:18
+# Step 1: Build React app
+FROM node:18 AS build
 
 WORKDIR /app
 
-COPY package.json package-lock.json ./
-
+COPY package*.json ./
 RUN npm install
 
 COPY . .
-
 RUN npm run build
 
-# Use lightweight server
-RUN npm install -g serve
+# Step 2: Serve with Nginx
+FROM nginx:alpine
 
-EXPOSE 3000
+COPY --from=build /app/build /usr/share/nginx/html
 
-CMD ["serve", "-s", "build", "-l", "3000"]
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

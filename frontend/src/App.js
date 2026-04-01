@@ -13,7 +13,7 @@ function App() {
     setSummary("");
 
     try {
-      const response = await fetch("http://localhost:8000/summarize", {
+      const response = await fetch("https://text-summary-backend.icymeadow-66425bc4.eastus.azurecontainerapps.io/summarize", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
